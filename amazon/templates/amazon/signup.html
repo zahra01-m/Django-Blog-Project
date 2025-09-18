@@ -1,0 +1,28 @@
+{% extends "amazon/base.html" %}
+{% load static %}
+{% block title %}
+    Sign Up Page
+{% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'amazon/signup.css' %}">
+{% endblock %}
+{% block content %}
+    <section id="data">
+        <form method="POST" action="{% url 'Post' %}">
+            {% csrf_token %}
+            <label for="name"> Name
+                <input type="text" name="name" placeholder="Enter your Name" id="name">
+            </label>
+            <br>
+            <label for="mail"> Email
+                <input type="email" name="email" placeholder="Enter your Email" id="mail">
+            </label>
+            <br>
+            <label for="passw"> Password
+                <input type="password" name="password" placeholder="Enter your Password" id="passw">
+            </label>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+{% endblock %}

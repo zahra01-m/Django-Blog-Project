@@ -1,0 +1,24 @@
+{%extends "amazon/base.html"%}
+{%load static  %}
+{%block title%}
+Home Page
+
+{%endblock%}
+{%block css_files%}
+    <link rel="stylesheet" href="{%static 'amazon/index.css'%}">
+{%endblock%}
+{%block content%}
+         <div id="contents">
+         <h1>Welcome To Our Website</h1>
+         <h2>Click on Signup if you are a Newuser</h2>
+         <h2>Click on Login if already have an account</h2> 
+</div>
+<section id="latest Thoughts">
+<h2>My Latest Thoughts</h2>
+<ul>
+  {%for post in posts%}
+    {%include "amazon/include/post.html" %}
+  {%endfor%}
+</ul>
+</section>
+{%endblock%}

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{% endblock %}</title>
+    {%block css_files%}
+                 <link rel="stylesheet" href="{%static "amazon/app.css"%}">
+    {%endblock%}
+</head>
+<body>
+    <header id="main-nav">
+        <section class="logo">
+            <h1>
+                <a href="{%url 'home'%}">Zahra's Blog</a>
+                <img src="{% static 'amazon/images/author.png' %}" alt="website logo" width="80" height="80">
+            </h1>
+        </section>
+        <div name="all-post">
+            <a href="{%url 'read-later'%}">Stored posts</a>
+            <a href="{%url 'Post'%}">All posts</a>
+        </div>
+        <div class="buttons">
+            <nav>
+                <a href="{%url 'signup'%}">Signup</a>
+                <a href="{%url 'login'%}">Login</a>
+            </nav>
+    </header>
+        
+    <main id="cont">
+    {%block content%}{%endblock%}
+    </main>
+    <footer id="bottom-one">
+        <p>All right reserved</p>
+        <p>Zahra's Blog--Way to express your thoughts</p>
+    </footer>
+</body>
+</html>

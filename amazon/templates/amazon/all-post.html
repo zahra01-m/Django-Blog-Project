@@ -1,0 +1,18 @@
+{% extends "amazon/base.html" %}
+{% load static %}
+
+{% block title %} All Posts {% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'amazon/all-post.css' %}">
+{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for post in all_posts %}
+            {% include "amazon/include/post.html" with posts=post %}
+        {% empty %}
+            <p>No posts available</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

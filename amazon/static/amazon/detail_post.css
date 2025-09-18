@@ -1,0 +1,151 @@
+/* === General Layout === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Post Summary Section === */
+#summary {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#summary h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+#summary article {
+    margin-top: 1rem;
+}
+
+#summary img {
+    width: 100%;
+    max-width: 350px;   /* reduced from 500px */
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    object-fit: cover;  /* keeps proportions neat */
+}
+
+/* === Author and Date === */
+#summary address {
+    font-style: normal;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+#summary address a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+#summary address a:hover {
+    text-decoration: underline;
+}
+
+#summary time {
+    font-size: 0.85rem;
+    color: #777;
+}
+#read-later{
+    margin:2rem 0;
+}
+#read-later button{
+    background-color: transparent;
+    border: 1ps solid white;
+    padding: 0.5rem 2rem;
+    font:inherit;
+    color:white;
+}
+#read-later button:hover,
+#read-later button:active{
+    background-color: white;
+    color:#390281
+}
+/* === Post Content === */
+main {
+    max-width: 900px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+main p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    text-align: justify;
+    color: #444;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    #summary, main {
+        padding: 1.2rem;
+        margin: 1rem;
+    }
+
+    #summary h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+        color: white;
+    }
+
+    #summary img {
+        max-width: 250px;   /* smaller images on mobiles */
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}
+.tag{
+    background-color: white;
+    color:#0077cc;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+}
+.errorlist{
+    list-style: none;
+    margin:0.5rem 0;
+    padding:0;
+    color: rgb(188, 3, 3);
+}
+.invalid label{
+    color: rgb(188, 3, 3);
+}
+.invalid input,
+.invalid textarea{
+    border-color: rgb(188, 3, 3);
+    background-color: #ffe6e7;
+}
+#alert{
+    margin: 2rem auto;
+    border:1px solid rgb(188, 3, 3);
+    background-color: #f9f9f9;
+    padding:1rem;
+    width:90%;
+    max-width: 40rem;
+}
+#alert a{
+    text-decoration: none;
+    border:1px solid rgb(188, 3, 3);
+    background-color: rgb(188, 3, 3);
+    color: #f9f9f9;
+    padding:0.25rem 1.5rem;
+    border-radius: 6px;
+
+}
